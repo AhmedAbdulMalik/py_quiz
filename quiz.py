@@ -27,4 +27,4 @@ for plays in quiz:
 	for key,value in plays["options"].items():
 		print(f"[ {key} ] : {value}")
 #since optiond are stored in a dict we will use key & value
-	user_answer = input("Answer:").lower()		
+	user_answer = input("Answer:")strip().lower()		
