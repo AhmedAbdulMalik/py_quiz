@@ -1,3 +1,7 @@
+game_score = 0
+
+print("Welcome to THE quiz, where correct answer gets you +4 and wrong answers get you -1 \n totally not trying to revive the PTSD of JEE :)\nHAVE FUN\n")
+
 
 quiz = [
 	 {
@@ -27,4 +31,12 @@ for plays in quiz:
 	for key,value in plays["options"].items():
 		print(f"[ {key} ] : {value}")
 #since optiond are stored in a dict we will use key & value
-	user_answer = input("Answer:")strip().lower()		
+	user_answer = input("Answer:").strip().lower()
+	
+	if user_answer == plays["answer"]:
+		print("Correct!")
+		game_score += 4 
+	else:
+		print(f"LOL you are Wrong!\n {plays["answer"]} was the correct answer")
+		game_score -= 1
+print(f"The final score is {game_score}") 		
