@@ -1,8 +1,11 @@
+import textwrap
 game_score = 0
 
-print("Welcome to THE quiz, where correct answer gets you +4 and wrong answers get you -1 \n totally not trying to revive the PTSD of JEE :)\nHAVE FUN\n")
+startup_text = "Welcome to THE quiz, where correct answer gets you +4 and wrong answers get you -1 \n totally not trying to revive the PTSD of JEE :)\nHAVE FUN\n"
 
-
+wrapped_startuptext = textwrap.wrap(startup_text, width=30)
+for line in wrapped_startuptext:
+	print(line)
 quiz = [
 	 {
 	 "question":"who is the most creepiest Tech CEO?",
